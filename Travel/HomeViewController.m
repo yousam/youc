@@ -21,10 +21,12 @@
 @end
 NSUInteger kNumberOfPages = 0;
 /////////////////////////////////////
+
 @implementation HomeViewController
 @synthesize scroImg;
 @synthesize collectionView;
 @synthesize Request=request;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

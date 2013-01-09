@@ -116,8 +116,6 @@
 		C38AFB5315D881910002A197 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38AFB5115D881910002A197 /* HomeViewController.xib */; };
 		C38E5857162B06CE00F9C8AF /* PrivteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E5856162B06CE00F9C8AF /* PrivteCell.m */; };
 		C38E585A162B06E700F9C8AF /* PrivteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38E5859162B06E700F9C8AF /* PrivteCell.xib */; };
-		C38E585E162B083200F9C8AF /* privateLetterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E585C162B083200F9C8AF /* privateLetterCell.m */; };
-		C38E585F162B083200F9C8AF /* PrivateLetterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38E585D162B083200F9C8AF /* PrivateLetterCell.xib */; };
 		C3907D5E162BEEA20035FE0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3907D5D162BEEA20035FE0C /* Default-568h@2x.png */; };
 		C3A52F4916226644001241E9 /* top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A52F4716226644001241E9 /* top@2x.png */; };
 		C3A52F4A16226644001241E9 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A52F4816226644001241E9 /* top.png */; };
@@ -133,6 +131,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10099781169DAD9700595731 /* HeadIntegrate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadIntegrate.h; sourceTree = "<group>"; };
+		10099782169DAD9800595731 /* HeadIntegrate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadIntegrate.m; sourceTree = "<group>"; };
+		10099783169DB2D200595731 /* ActivityIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorView.h; sourceTree = "<group>"; };
+		10099784169DB2D200595731 /* ActivityIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorView.m; sourceTree = "<group>"; };
 		582710EF15DA75F7005C03A0 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		582710F015DA75F7005C03A0 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		582710F115DA75F7005C03A0 /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
@@ -311,12 +313,9 @@
 		C38AFB4F15D881910002A197 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C38AFB5015D881910002A197 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C38AFB5115D881910002A197 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		C38E5855162B06CE00F9C8AF /* PrivteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrivteCell.h; path = Cell/PrivteCell.h; sourceTree = "<group>"; };
-		C38E5856162B06CE00F9C8AF /* PrivteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrivteCell.m; path = Cell/PrivteCell.m; sourceTree = "<group>"; };
-		C38E5859162B06E700F9C8AF /* PrivteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrivteCell.xib; path = Cell/PrivteCell.xib; sourceTree = "<group>"; };
-		C38E585B162B083200F9C8AF /* privateLetterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privateLetterCell.h; path = Cell/privateLetterCell.h; sourceTree = "<group>"; };
-		C38E585C162B083200F9C8AF /* privateLetterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = privateLetterCell.m; path = Cell/privateLetterCell.m; sourceTree = "<group>"; };
-		C38E585D162B083200F9C8AF /* PrivateLetterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrivateLetterCell.xib; path = Cell/PrivateLetterCell.xib; sourceTree = "<group>"; };
+		C38E5855162B06CE00F9C8AF /* PrivteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrivteCell.h; path = ../Cell/PrivteCell.h; sourceTree = "<group>"; };
+		C38E5856162B06CE00F9C8AF /* PrivteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrivteCell.m; path = ../Cell/PrivteCell.m; sourceTree = "<group>"; };
+		C38E5859162B06E700F9C8AF /* PrivteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrivteCell.xib; path = ../Cell/PrivteCell.xib; sourceTree = "<group>"; };
 		C3907D5D162BEEA20035FE0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3A52F4716226644001241E9 /* top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top@2x.png"; sourceTree = "<group>"; };
 		C3A52F4816226644001241E9 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
@@ -367,6 +366,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1009977C169DA85000595731 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C38E5855162B06CE00F9C8AF /* PrivteCell.h */,
+				C38E5856162B06CE00F9C8AF /* PrivteCell.m */,
+				C38E5859162B06E700F9C8AF /* PrivteCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		582710EE15DA75F7005C03A0 /* img */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +397,10 @@
 		86ED68B615E1280C00FFD4E5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				10099783169DB2D200595731 /* ActivityIndicatorView.h */,
+				10099784169DB2D200595731 /* ActivityIndicatorView.m */,
+				10099781169DAD9700595731 /* HeadIntegrate.h */,
+				10099782169DAD9800595731 /* HeadIntegrate.m */,
 				C3E3608A16972C390073067C /* PSCollectionView.m */,
 				C3E3608B16972C390073067C /* PSCollectionView.h */,
 				C3E3608C16972C390073067C /* PSCollectionViewCell.m */,
@@ -418,9 +431,6 @@
 				C321D45A16593B3800009BFB /* ServiceBase.m */,
 				C321D45B16593B3800009BFB /* ServiceBase.h */,
 				C321D3E71659327D00009BFB /* Constants.h */,
-				C38E585B162B083200F9C8AF /* privateLetterCell.h */,
-				C38E585C162B083200F9C8AF /* privateLetterCell.m */,
-				C38E585D162B083200F9C8AF /* PrivateLetterCell.xib */,
 				C36EC8DE16229F940060C168 /* AttentionCell.xib */,
 				C36EC8DF16229F940060C168 /* AttentionCell.h */,
 				C36EC8E016229F940060C168 /* AttentionCell.m */,
@@ -436,9 +446,6 @@
 				C36EC91716231EA20060C168 /* FansCell.h */,
 				C36EC91816231EA20060C168 /* FansCell.m */,
 				C36EC91A16231EB90060C168 /* FansCell.xib */,
-				C38E5855162B06CE00F9C8AF /* PrivteCell.h */,
-				C38E5856162B06CE00F9C8AF /* PrivteCell.m */,
-				C38E5859162B06E700F9C8AF /* PrivteCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -559,6 +566,7 @@
 		C36EC8B416229D0B0060C168 /* SetUp */ = {
 			isa = PBXGroup;
 			children = (
+				1009977C169DA85000595731 /* Cell */,
 				C36EC8F21622A9AD0060C168 /* SetUpViewController.h */,
 				C36EC8F31622A9AD0060C168 /* SetUpViewController.m */,
 				C36EC8F41622A9AD0060C168 /* SetUpViewController.xib */,
@@ -782,7 +790,6 @@
 				C36EC91B16231EB90060C168 /* FansCell.xib in Resources */,
 				C36EC92A162327160060C168 /* ReplyViewController.xib in Resources */,
 				C38E585A162B06E700F9C8AF /* PrivteCell.xib in Resources */,
-				C38E585F162B083200F9C8AF /* PrivateLetterCell.xib in Resources */,
 				C3907D5E162BEEA20035FE0C /* Default-568h@2x.png in Resources */,
 				C3E3608916972B950073067C /* CellView.xib in Resources */,
 			);
@@ -822,7 +829,6 @@
 				C36EC91916231EA20060C168 /* FansCell.m in Sources */,
 				C36EC929162327160060C168 /* ReplyViewController.m in Sources */,
 				C38E5857162B06CE00F9C8AF /* PrivteCell.m in Sources */,
-				C38E585E162B083200F9C8AF /* privateLetterCell.m in Sources */,
 				C321D3C616592FBD00009BFB /* NSObject+SBJson.m in Sources */,
 				C321D3C716592FBD00009BFB /* SBJsonParser.m in Sources */,
 				C321D3C816592FBD00009BFB /* SBJsonStreamParser.m in Sources */,

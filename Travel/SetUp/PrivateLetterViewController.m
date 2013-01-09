@@ -7,38 +7,26 @@
 //
 
 #import "PrivateLetterViewController.h"
+#import "ActivityIndicatorView.h"
 #import "AppDelegate.h"
-#import "privateLetterCell.h"
 #import "PrivteCell.h"
+#import "JSON.h"
+#import "HeadIntegrate.h"
+
 @implementation PrivateLetterViewController
+@synthesize tab;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    // Return the number of sections.
+    return 1;
 }
 
-- (void)didReceiveMemoryWarning
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-- (IBAction)onNav:(id)sender {
-    if ([sender tag]==101) {
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] onleft];
-    }
-    if ([sender tag]==102) {
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] onright];
-    }   
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 15;
+    return [dataList count];
 }
 
 
@@ -46,36 +34,100 @@
     
     return 130;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    //先测试
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PrivteCell" owner:self options:nil];
-    PrivteCell*cell=nil;
-    for (id obj in nib) {
-        if ([obj isKindOfClass:[PrivteCell class]]) {
-            cell = (PrivteCell *) obj;
-        }
-    }
+    cell.textLabel.text = [[dataList objectAtIndex:indexPath.row] objectForKey:@"name"];
+    
     return cell;
+
+//    //暂时注释cell
+//    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PrivteCell" owner:self options:nil];
+//    PrivteCell*cell=nil;
+//    for (id obj in nib) {
+//        if ([obj isKindOfClass:[PrivteCell class]]) {
+//            cell = (PrivteCell *) obj;
+//            
+//        }
+//    }
+//    return cell;
+    
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 1;
-} 
+#pragma mark - 数据
+-(void)getData{
+    if (![System connectedToNetwork])
+	{
+		return;
+	}
+    [dataList removeAllObjects];
+    NSString * strUrl=
+    [NSString stringWithFormat:@"%@city",
+     API_SEAECHSERVER_ADR];
+	NSURL * url=[NSURL URLWithString:strUrl];
+    [ASIFormDataRequest setShouldUpdateNetworkActivityIndicator:NO];
+	request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request setRequestMethod:@"GET"];
+    [request setDidFinishSelector:@selector(requestNewsList:)];
+    [request setThreadPriority:1];
+	[request startAsynchronous];
+}
+
+- (void)requestNewsList:(ASIHTTPRequest *)aRequest
+{
+    NSString *responseString = [aRequest responseString];
+    NSDictionary *body= [[responseString JSONValue]objectForKey:@"body"];
+    [dataList removeAllObjects];
+    [dataList addObjectsFromArray:[body objectForKey:@"cityList"]];
+    [tab reloadData];
+    [self.view stopLoadingAnimation];
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)aRequest
+{
+    [self.view stopLoadingAnimation];
+}
+
+
+- (void)requestStarted:(ASIHTTPRequest *)aRequest
+{
+    [self.view startLoadingAnimation];
+}
+
 #pragma mark - View lifecycle
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+        dataList=[[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
     self.navigationController.navigationBarHidden=YES;
+    
+    [self getData];
 }
 
 - (void)viewDidUnload
 {
+    [self setTab:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -83,5 +135,22 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (void)dealloc {
+    [tab release];
+    [dataList release];
+    [super dealloc];
+}
+
+
+- (IBAction)onNav:(id)sender {
+    if ([sender tag]==101) {
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] onleft];
+    }
+    if ([sender tag]==102) {
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] onright];
+    }
+}
+
 
 @end
