@@ -412,6 +412,12 @@
 		86ED68D015E12E0100FFD4E5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C3E3608516972B940073067C /* CellView.h */,
+				C3E3608616972B940073067C /* CellView.m */,
+				C3E3608716972B950073067C /* CellView.xib */,
+				C321D45A16593B3800009BFB /* ServiceBase.m */,
+				C321D45B16593B3800009BFB /* ServiceBase.h */,
+				C321D3E71659327D00009BFB /* Constants.h */,
 				C38E585B162B083200F9C8AF /* privateLetterCell.h */,
 				C38E585C162B083200F9C8AF /* privateLetterCell.m */,
 				C38E585D162B083200F9C8AF /* PrivateLetterCell.xib */,
@@ -435,13 +441,6 @@
 				C38E5859162B06E700F9C8AF /* PrivteCell.xib */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		C321D36616592EA100009BFB /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		C321D36816592FBD00009BFB /* EGORefreshTableHeader */ = {
@@ -662,21 +661,11 @@
 		C38AFB2E15D880750002A197 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
-				C3E3608516972B940073067C /* CellView.h */,
-				C3E3608616972B940073067C /* CellView.m */,
-				C3E3608716972B950073067C /* CellView.xib */,
-				C321D45A16593B3800009BFB /* ServiceBase.m */,
-				C321D45B16593B3800009BFB /* ServiceBase.h */,
-				C321D3E71659327D00009BFB /* Constants.h */,
-				C321D36616592EA100009BFB /* New Group */,
+				86ED68B615E1280C00FFD4E5 /* Library */,
 				C36EC8B416229D0B0060C168 /* SetUp */,
 				C36EC8B516229D0B0060C168 /* Trip */,
 				C36EC8B616229D0B0060C168 /* UserInfo */,
 				86ED68D015E12E0100FFD4E5 /* Cell */,
-				86ED68B615E1280C00FFD4E5 /* Library */,
-				582710EE15DA75F7005C03A0 /* img */,
-				C38AFB3715D880750002A197 /* AppDelegate.h */,
-				C38AFB3815D880750002A197 /* AppDelegate.m */,
 				C38AFB2F15D880750002A197 /* Supporting Files */,
 				C38AFB4515D881380002A197 /* SettingsViewController.h */,
 				C38AFB4615D881380002A197 /* SettingsViewController.m */,
@@ -690,6 +679,8 @@
 				86ED68D615E138EA00FFD4E5 /* SearchViewController.h */,
 				86ED68D715E138EA00FFD4E5 /* SearchViewController.m */,
 				86ED68D815E138EA00FFD4E5 /* SearchViewController.xib */,
+				C38AFB3715D880750002A197 /* AppDelegate.h */,
+				C38AFB3815D880750002A197 /* AppDelegate.m */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -697,6 +688,7 @@
 		C38AFB2F15D880750002A197 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				582710EE15DA75F7005C03A0 /* img */,
 				C38AFB3015D880750002A197 /* Travel-Info.plist */,
 				C38AFB3115D880750002A197 /* InfoPlist.strings */,
 				C38AFB3415D880750002A197 /* main.m */,
