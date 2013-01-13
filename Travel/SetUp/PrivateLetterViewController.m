@@ -71,7 +71,6 @@
     NSString * strUrl=
     [NSString stringWithFormat:@"%@city",
      API_SEAECHSERVER_ADR];
-//    NSString*strUrl=@"http://sp.autohome.com.cn/statistics/customnavigation.ashx?clientType=1&showvideo=1";
 	NSURL * url=[NSURL URLWithString:strUrl];
 	self.request=[ASIFormDataRequest requestWithURL:url];
 	self.request.delegate=self;
@@ -85,7 +84,8 @@
 - (void)requestFinished:(ASIHTTPRequest *)aRequest
 {
     NSString *responseString =[aRequest.responseString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary*values=[responseString objectFromJSONString];
+    
+    NSDictionary*values=[responseString objectFromJSONString];//json字符串 序列化成对象 新方法
     if (values) {
         NSDictionary *body= [values objectForKey:@"body"];
         [dataList removeAllObjects];
