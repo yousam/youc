@@ -12,12 +12,12 @@
 @class GCDiscreetNotificationView;
 @interface PrivateLetterViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,ASIHTTPRequestDelegate>
 {
-    ASIHTTPRequest* request;
+    ASIFormDataRequest* request;
     NSMutableArray*dataList;
 }
 @property (nonatomic, retain) GCDiscreetNotificationView *notificationView;
 @property (retain, nonatomic) IBOutlet UITableView *tab;
-@property(retain,nonatomic)ASIHTTPRequest* request;
+@property(retain,nonatomic)ASIFormDataRequest* request;
 -(void)getData;
 -(IBAction)onNav:(id)sender ;
 

@@ -9,9 +9,11 @@
 #import "PrivateLetterViewController.h"
 #import "AppDelegate.h"
 #import "PrivteCell.h"
-#import "JSON.h"
+//#import "JSON.h"
 #import "HeadIntegrate.h"
 #import "GCDiscreetNotificationView.h"
+#import "NSString+URLEncoding.h"
+#import "JSONKit.h"
 @implementation PrivateLetterViewController
 @synthesize tab;
 @synthesize request,notificationView;
@@ -38,8 +40,10 @@
 
     //先测试
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     cell.textLabel.text = [[dataList objectAtIndex:indexPath.row] objectForKey:@"name"];
     
     return cell;
@@ -67,21 +71,27 @@
     NSString * strUrl=
     [NSString stringWithFormat:@"%@city",
      API_SEAECHSERVER_ADR];
+//    NSString*strUrl=@"http://sp.autohome.com.cn/statistics/customnavigation.ashx?clientType=1&showvideo=1";
 	NSURL * url=[NSURL URLWithString:strUrl];
-	self.request=[ASIHTTPRequest requestWithURL:url];
+	self.request=[ASIFormDataRequest requestWithURL:url];
 	self.request.delegate=self;
 	[request setRequestMethod:@"GET"];
-    [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
+    request.responseEncoding=NSUTF8StringEncoding;
+    request.defaultResponseEncoding=NSUTF8StringEncoding;
+    [ASIFormDataRequest setShouldUpdateNetworkActivityIndicator:NO];
     [request startAsynchronous];
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)aRequest
 {
-    NSString *responseString = [aRequest responseString];
-    NSDictionary *body= [[responseString JSONValue]objectForKey:@"body"];
-    [dataList removeAllObjects];
-    [dataList addObjectsFromArray:[body objectForKey:@"cityList"]];
-    [tab reloadData];
+    NSString *responseString =[aRequest.responseString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary*values=[responseString objectFromJSONString];
+    if (values) {
+        NSDictionary *body= [values objectForKey:@"body"];
+        [dataList removeAllObjects];
+        [dataList addObjectsFromArray:[body objectForKey:@"cityList"]];
+        [tab reloadData];
+    }
     [self.notificationView hide:YES];
 }
 
