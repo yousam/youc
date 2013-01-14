@@ -8,15 +8,28 @@
 
 #import <UIKit/UIKit.h>
 #import "UrlImageView.h"
+#import "ASIFormDataRequest.h"
+#import "System.h"
+@class GCDiscreetNotificationView;
 
-@interface UserInfoViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface UserInfoViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ASIHTTPRequestDelegate>
+{
+    ASIFormDataRequest* request;
+    NSMutableArray*dataList;
+    
+    //数量Label 游记，关注，粉丝，收藏，留言
+    UILabel *lblTravelnum, *lblAttentionnum, *lblFansnum, *lblCollectsnum, *lblLeavesnum;
+    //名字，签名
+    UILabel *lblName, *lblSigname;
+}
+
+@property (retain, nonatomic) GCDiscreetNotificationView *notificationView;
+@property (retain, nonatomic) ASIFormDataRequest* request;
+
+@property (retain, nonatomic) IBOutlet UIView *mainView;
+
 @property (retain, nonatomic) IBOutlet UrlImageView *headImg;
 
-@property (retain, nonatomic) IBOutlet UIView *btnView;
-@property (retain, nonatomic) IBOutlet UIView *btnView1;
-@property (retain, nonatomic) IBOutlet UIView *btnView2;
-@property (retain, nonatomic) IBOutlet UIView *btnView3;
-@property (retain, nonatomic) IBOutlet UIView *btnView4;
 
 - (IBAction)onClick:(id)sender;
 
@@ -24,4 +37,9 @@
 
 
 - (IBAction)onNav:(id)sender;
+
+//初始化Button
+-(void)initButton;
+-(void)getData;
+
 @end

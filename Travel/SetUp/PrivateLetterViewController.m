@@ -95,6 +95,8 @@
         [tab reloadData];
     }
     [self.notificationView hide:YES];
+    
+    [responseString release];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)aRequest

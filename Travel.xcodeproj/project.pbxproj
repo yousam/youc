@@ -607,8 +607,8 @@
 				C36EC8C516229E5B0060C168 /* FootprintViewController.m */,
 				C36EC8BF16229E5B0060C168 /* FootprintViewController.xib */,
 				C36EC8C616229E5B0060C168 /* TripViewController.h */,
-				C36EC8BD16229E5B0060C168 /* TripViewController.xib */,
 				C36EC8C016229E5B0060C168 /* TripViewController.m */,
+				C36EC8BD16229E5B0060C168 /* TripViewController.xib */,
 			);
 			path = Trip;
 			sourceTree = "<group>";
@@ -617,14 +617,14 @@
 			isa = PBXGroup;
 			children = (
 				C36EC8CF16229F180060C168 /* AttentionViewController.h */,
-				C36EC8D016229F180060C168 /* CollectionViewController.xib */,
+				C36EC8D416229F180060C168 /* AttentionViewController.m */,
 				C36EC8D116229F180060C168 /* AttentionViewController.xib */,
 				C36EC8D216229F180060C168 /* UserInfoViewController.h */,
-				C36EC8D316229F180060C168 /* UserInfoViewController.xib */,
-				C36EC8D416229F180060C168 /* AttentionViewController.m */,
 				C36EC8D516229F180060C168 /* UserInfoViewController.m */,
-				C36EC8D616229F180060C168 /* CollectionViewController.m */,
+				C36EC8D316229F180060C168 /* UserInfoViewController.xib */,
 				C36EC8D716229F180060C168 /* CollectionViewController.h */,
+				C36EC8D616229F180060C168 /* CollectionViewController.m */,
+				C36EC8D016229F180060C168 /* CollectionViewController.xib */,
 				C36EC91116231E150060C168 /* FansViewController.h */,
 				C36EC91216231E150060C168 /* FansViewController.m */,
 				C36EC91316231E150060C168 /* FansViewController.xib */,
