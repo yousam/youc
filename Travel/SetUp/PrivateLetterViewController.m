@@ -74,16 +74,18 @@
 	NSURL * url=[NSURL URLWithString:strUrl];
 	self.request=[ASIFormDataRequest requestWithURL:url];
 	self.request.delegate=self;
-	[request setRequestMethod:@"GET"];
-    request.responseEncoding=NSUTF8StringEncoding;
-    request.defaultResponseEncoding=NSUTF8StringEncoding;
+	[request setRequestMethod:@"GET"]; 
     [ASIFormDataRequest setShouldUpdateNetworkActivityIndicator:NO];
     [request startAsynchronous];
+    
+    //NSString *responseStr=[[NSString alloc] initWithData:[request responseData] encoding:NSUTF8StringEncoding];
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)aRequest
 {
-    NSString *responseString =[aRequest.responseString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //NSString *responseString = [aRequest.responseString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *responseString =[[NSString alloc] initWithData:[aRequest responseData] encoding:NSUTF8StringEncoding];
     
     NSDictionary*values=[responseString objectFromJSONString];//json字符串 序列化成对象 新方法
     if (values) {
@@ -109,6 +111,7 @@
 
     
 }
+
 #pragma mark - View lifecycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

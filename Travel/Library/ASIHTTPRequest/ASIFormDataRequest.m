@@ -49,7 +49,10 @@
 	self = [super initWithURL:newURL];
 	[self setPostFormat:ASIURLEncodedPostFormat];
 	[self setStringEncoding:NSUTF8StringEncoding];
-        [self setRequestMethod:@"POST"];
+    [self setRequestMethod:@"POST"]; 
+    self.responseEncoding=NSUTF8StringEncoding;
+    self.defaultResponseEncoding=NSUTF8StringEncoding;
+    
 	return self;
 }
 
