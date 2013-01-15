@@ -2,7 +2,7 @@
 //  AHWebLabel.m
 //  AHLibrarys
 //
-//  Created by 王颖 on 12-11-2.
+//  Created by 王俊 on 12-11-2.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 

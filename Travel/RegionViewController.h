@@ -2,7 +2,7 @@
 //  RegionViewController.h
 //  Travel
 //
-//  Created by 王颖 on 12-8-13.
+//  Created by 王俊 on 12-8-13.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
