@@ -202,8 +202,6 @@
         [lblCollectsnum setText:[NSString stringWithFormat:@"%@", [[values objectForKey:@"body"] objectForKey:@"favoritesCount"]]];
         [lblLeavesnum setText:[NSString stringWithFormat:@"%@", [[values objectForKey:@"body"] objectForKey:@"replayCount"]]];
         
-        
-        [self reflashData];
     }
     [self.notificationView hide:YES];
     

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10B604BF16A5388C004B26D6 /* UserUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B604BE16A5388C004B26D6 /* UserUtils.m */; };
+		10B604C316A55CB2004B26D6 /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B604C116A55CB1004B26D6 /* UserLoginViewController.m */; };
+		10B604C416A55CB2004B26D6 /* UserLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B604C216A55CB2004B26D6 /* UserLoginViewController.xib */; };
 		582710F815DA75F7005C03A0 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 582710EF15DA75F7005C03A0 /* img1.png */; };
 		582710F915DA75F7005C03A0 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 582710F015DA75F7005C03A0 /* img2.png */; };
 		582710FA15DA75F7005C03A0 /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 582710F115DA75F7005C03A0 /* img3.png */; };
@@ -136,6 +139,11 @@
 /* Begin PBXFileReference section */
 		10099781169DAD9700595731 /* HeadIntegrate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadIntegrate.h; sourceTree = "<group>"; };
 		10099782169DAD9800595731 /* HeadIntegrate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadIntegrate.m; sourceTree = "<group>"; };
+		10B604BD16A5388C004B26D6 /* UserUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserUtils.h; sourceTree = "<group>"; };
+		10B604BE16A5388C004B26D6 /* UserUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUtils.m; sourceTree = "<group>"; };
+		10B604C016A55CB1004B26D6 /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
+		10B604C116A55CB1004B26D6 /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		10B604C216A55CB2004B26D6 /* UserLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserLoginViewController.xib; sourceTree = "<group>"; };
 		582710EF15DA75F7005C03A0 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		582710F015DA75F7005C03A0 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		582710F115DA75F7005C03A0 /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
@@ -281,9 +289,9 @@
 		C36EC8F91622AE300060C168 /* OpinionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpinionViewController.h; sourceTree = "<group>"; };
 		C36EC8FA1622AE300060C168 /* OpinionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpinionViewController.m; sourceTree = "<group>"; };
 		C36EC8FB1622AE300060C168 /* OpinionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpinionViewController.xib; sourceTree = "<group>"; };
-		C36EC8FE1622AF7B0060C168 /* UserManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManagerViewController.h; sourceTree = "<group>"; };
-		C36EC8FF1622AF7B0060C168 /* UserManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManagerViewController.m; sourceTree = "<group>"; };
-		C36EC9001622AF7B0060C168 /* UserManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserManagerViewController.xib; sourceTree = "<group>"; };
+		C36EC8FE1622AF7B0060C168 /* UserManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManagerViewController.h; path = ../SetUp/UserManagerViewController.h; sourceTree = "<group>"; };
+		C36EC8FF1622AF7B0060C168 /* UserManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManagerViewController.m; path = ../SetUp/UserManagerViewController.m; sourceTree = "<group>"; };
+		C36EC9001622AF7B0060C168 /* UserManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserManagerViewController.xib; path = ../SetUp/UserManagerViewController.xib; sourceTree = "<group>"; };
 		C36EC9031622B8EF0060C168 /* PrivateLetterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateLetterViewController.h; sourceTree = "<group>"; };
 		C36EC9041622B8EF0060C168 /* PrivateLetterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateLetterViewController.m; sourceTree = "<group>"; };
 		C36EC9051622B8EF0060C168 /* PrivateLetterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivateLetterViewController.xib; sourceTree = "<group>"; };
@@ -383,6 +391,15 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		10B604BC16A53768004B26D6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10B604BD16A5388C004B26D6 /* UserUtils.h */,
+				10B604BE16A5388C004B26D6 /* UserUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		582710EE15DA75F7005C03A0 /* img */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,9 +421,14 @@
 		86ED68B615E1280C00FFD4E5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				10B604BC16A53768004B26D6 /* Utils */,
+				C321D36816592FBD00009BFB /* EGORefreshTableHeader */,
+				C321D3A816592FBD00009BFB /* AHLabel */,
+				C321D41F1659399300009BFB /* SDWebBase */,
+				C321D4301659399300009BFB /* ASIHTTPRequest */,
+				C33261D316A254A7001608E9 /* SBJson */,
 				C3929C1716A25B21008BDB53 /* JSONKit.h */,
 				C3929C1816A25B21008BDB53 /* JSONKit.m */,
-				C33261D316A254A7001608E9 /* SBJson */,
 				C348157316A0FB8B002A19E7 /* NSString+URLEncoding.h */,
 				C348157416A0FB8B002A19E7 /* NSString+URLEncoding.m */,
 				C332EBF216C0A0A300D664AA /* GCDiscreetNotificationView.h */,
@@ -417,18 +439,14 @@
 				C3E3608B16972C390073067C /* PSCollectionView.h */,
 				C3E3608C16972C390073067C /* PSCollectionViewCell.m */,
 				C3E3608D16972C390073067C /* PSCollectionViewCell.h */,
-				C321D41F1659399300009BFB /* SDWebBase */,
-				C321D4301659399300009BFB /* ASIHTTPRequest */,
 				C321D3FC165937BB00009BFB /* AlertHelper.h */,
 				C321D3FD165937BB00009BFB /* AlertHelper.m */,
-				C321D36816592FBD00009BFB /* EGORefreshTableHeader */,
-				C321D3A816592FBD00009BFB /* AHLabel */,
 				C321D3BE16592FBD00009BFB /* System.h */,
 				C321D3BF16592FBD00009BFB /* System.m */,
 				C36EC8B816229D340060C168 /* LLWaterFlowView.m */,
 				C36EC8B916229D340060C168 /* LLWaterFlowView.h */,
-				C388A73915F65D1C004F583E /* DDMenuController.m */,
 				C388A73A15F65D1C004F583E /* DDMenuController.h */,
+				C388A73915F65D1C004F583E /* DDMenuController.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -584,9 +602,6 @@
 				C36EC8F91622AE300060C168 /* OpinionViewController.h */,
 				C36EC8FA1622AE300060C168 /* OpinionViewController.m */,
 				C36EC8FB1622AE300060C168 /* OpinionViewController.xib */,
-				C36EC8FE1622AF7B0060C168 /* UserManagerViewController.h */,
-				C36EC8FF1622AF7B0060C168 /* UserManagerViewController.m */,
-				C36EC9001622AF7B0060C168 /* UserManagerViewController.xib */,
 				C36EC9031622B8EF0060C168 /* PrivateLetterViewController.h */,
 				C36EC9041622B8EF0060C168 /* PrivateLetterViewController.m */,
 				C36EC9051622B8EF0060C168 /* PrivateLetterViewController.xib */,
@@ -631,6 +646,12 @@
 				C36EC926162327150060C168 /* ReplyViewController.h */,
 				C36EC927162327150060C168 /* ReplyViewController.m */,
 				C36EC928162327160060C168 /* ReplyViewController.xib */,
+				C36EC8FE1622AF7B0060C168 /* UserManagerViewController.h */,
+				C36EC8FF1622AF7B0060C168 /* UserManagerViewController.m */,
+				C36EC9001622AF7B0060C168 /* UserManagerViewController.xib */,
+				10B604C016A55CB1004B26D6 /* UserLoginViewController.h */,
+				10B604C116A55CB1004B26D6 /* UserLoginViewController.m */,
+				10B604C216A55CB2004B26D6 /* UserLoginViewController.xib */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -803,6 +824,7 @@
 				C38E585A162B06E700F9C8AF /* PrivteCell.xib in Resources */,
 				C3907D5E162BEEA20035FE0C /* Default-568h@2x.png in Resources */,
 				C3E3608916972B950073067C /* CellView.xib in Resources */,
+				10B604C416A55CB2004B26D6 /* UserLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +905,8 @@
 				C33261F816A254A7001608E9 /* SBJsonUTF8Stream.m in Sources */,
 				C33261F916A254A7001608E9 /* SBJsonWriter.m in Sources */,
 				C3929C1916A25B21008BDB53 /* JSONKit.m in Sources */,
+				10B604BF16A5388C004B26D6 /* UserUtils.m in Sources */,
+				10B604C316A55CB2004B26D6 /* UserLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

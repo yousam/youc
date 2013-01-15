@@ -7,6 +7,7 @@
 //
 
 #import "UserManagerViewController.h"
+#import "UserLoginViewController.h"
 
 @implementation UserManagerViewController
 
@@ -31,9 +32,10 @@
 
 - (void)viewDidLoad
 {
+    self.navigationController.navigationBarHidden=YES;
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 2;
 }
@@ -42,6 +44,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"SettingsViewTableCell";
 	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -57,25 +60,28 @@
     } 
 	return cell;
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
     return 1;
 } 
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)onBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)onLogin:(id)sender {
+    UserLoginViewController *userlogin = [[UserLoginViewController alloc] initWithNibName:@"UserLoginViewController" bundle:nil];
+    [self.navigationController pushViewController:userlogin animated:YES];
+    [userlogin release];
 }
 @end

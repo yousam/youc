@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UserManagerViewController : UIViewController
+
 - (IBAction)onBack:(id)sender;
+- (IBAction)onLogin:(id)sender;
 
 @end

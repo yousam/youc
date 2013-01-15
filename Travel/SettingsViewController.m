@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "UserInfoViewController.h"
+#import "UserManagerViewController.h"
 #import "SearchViewController.h"
 #import "DDMenuController.h"
 #import "AppDelegate.h"
@@ -15,16 +16,25 @@
 #import "HomeViewController.h"
 #import "OpinionViewController.h"
 #import "PrivateLetterViewController.h"
+#import "UserUtils.h"
+
 @interface SettingsViewController ()
 
 @end
 
 @implementation SettingsViewController
 - (void)viewDidLoad {
-     self.navigationController.navigationBarHidden=YES;
-    tableTitles = [NSArray arrayWithObjects:@"张三丰",@"主页",@"精选",@"设置",@"搜索",@"关于",@"意见反馈",@"私信",@"帮助",nil];
+     self.navigationController.navigationBarHidden=YES; 
+    NSString *userName = @"请登录";
+    
+    if ([UserUtils getUserId] > 0) {
+        userName = [UserUtils getUserName];
+    } 
+    
+    tableTitles = [NSArray arrayWithObjects:userName,@"主页",@"精选",@"设置",@"搜索",@"关于",@"意见反馈",@"私信",@"帮助",nil];
     [tableTitles retain];
-    [super viewDidLoad];
+    [super viewDidLoad];  
+    
 }
 
 - (void)viewDidUnload {
@@ -52,10 +62,21 @@
     // ...新增代码 触发中间界面显示新内容。
     DDMenuController *menuController = (DDMenuController*)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UINavigationController *navController;
+    
     if (indexPath.row==0) {
-        UserInfoViewController *user=[[UserInfoViewController alloc]initWithNibName:@"UserInfoViewController" bundle:nil];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:user];
-		[user release];
+        if ([UserUtils getUserId] > 0) {
+            UserInfoViewController *user=[[UserInfoViewController alloc]initWithNibName:@"UserInfoViewController" bundle:nil];
+            navController = [[UINavigationController alloc] initWithRootViewController:user];
+            [user release];
+        }
+        else{
+            UserManagerViewController *user=[[UserManagerViewController alloc]initWithNibName:@"UserManagerViewController" bundle:nil];
+            navController = [[UINavigationController alloc] initWithRootViewController:user];
+            [user release];
+        }
+		
 		[menuController setRootController:navController animated:YES];
     }
     if (indexPath.row==1) {
