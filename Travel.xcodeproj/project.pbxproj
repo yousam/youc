@@ -279,9 +279,9 @@
 		C36EC8E416229F940060C168 /* SearchTravelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchTravelCell.xib; path = Cell/SearchTravelCell.xib; sourceTree = "<group>"; };
 		C36EC8E516229F940060C168 /* SearchTravelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTravelCell.h; path = Cell/SearchTravelCell.h; sourceTree = "<group>"; };
 		C36EC8E616229F940060C168 /* SearchTravelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTravelCell.m; path = Cell/SearchTravelCell.m; sourceTree = "<group>"; };
-		C36EC8E716229F940060C168 /* UserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserInfoCell.xib; path = Cell/UserInfoCell.xib; sourceTree = "<group>"; };
-		C36EC8E816229F940060C168 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoCell.h; path = Cell/UserInfoCell.h; sourceTree = "<group>"; };
-		C36EC8E916229F940060C168 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoCell.m; path = Cell/UserInfoCell.m; sourceTree = "<group>"; };
+		C36EC8E716229F940060C168 /* UserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserInfoCell.xib; path = ../Cell/UserInfoCell.xib; sourceTree = "<group>"; };
+		C36EC8E816229F940060C168 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoCell.h; path = ../Cell/UserInfoCell.h; sourceTree = "<group>"; };
+		C36EC8E916229F940060C168 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoCell.m; path = ../Cell/UserInfoCell.m; sourceTree = "<group>"; };
 		C36EC8F21622A9AD0060C168 /* SetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpViewController.h; sourceTree = "<group>"; };
 		C36EC8F31622A9AD0060C168 /* SetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpViewController.m; sourceTree = "<group>"; };
 		C36EC8F41622A9AD0060C168 /* SetUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpViewController.xib; sourceTree = "<group>"; };
@@ -391,6 +391,16 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		107C787016A58EC000432327 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C36EC8E716229F940060C168 /* UserInfoCell.xib */,
+				C36EC8E816229F940060C168 /* UserInfoCell.h */,
+				C36EC8E916229F940060C168 /* UserInfoCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		10B604BC16A53768004B26D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,9 +479,6 @@
 				C36EC8E416229F940060C168 /* SearchTravelCell.xib */,
 				C36EC8E516229F940060C168 /* SearchTravelCell.h */,
 				C36EC8E616229F940060C168 /* SearchTravelCell.m */,
-				C36EC8E716229F940060C168 /* UserInfoCell.xib */,
-				C36EC8E816229F940060C168 /* UserInfoCell.h */,
-				C36EC8E916229F940060C168 /* UserInfoCell.m */,
 				C36EC91716231EA20060C168 /* FansCell.h */,
 				C36EC91816231EA20060C168 /* FansCell.m */,
 				C36EC91A16231EB90060C168 /* FansCell.xib */,
@@ -631,6 +638,7 @@
 		C36EC8B616229D0B0060C168 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				107C787016A58EC000432327 /* Cell */,
 				C36EC8CF16229F180060C168 /* AttentionViewController.h */,
 				C36EC8D416229F180060C168 /* AttentionViewController.m */,
 				C36EC8D116229F180060C168 /* AttentionViewController.xib */,

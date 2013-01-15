@@ -10,4 +10,9 @@
 
 @interface UserInfoCell : UITableViewCell
 
+@property(retain, nonatomic) IBOutlet UILabel *lalTitle;
+@property(retain, nonatomic) IBOutlet UILabel *lalCreateTime;
+@property(retain, nonatomic) IBOutlet UILabel *lalFoodmarknum;
+@property(retain, nonatomic) IBOutlet UILabel *lalConllectNum;
+
 @end

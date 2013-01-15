@@ -39,7 +39,7 @@
 //    NSLog(@"txtName.text=%@",txtName.text);
 //    NSLog(@"txtPsw.text=%@",txtPsw.text);
     [UserUtils setUserId:2];
-    [UserUtils setUserName:txtPsw.text];
+    [UserUtils setUserName:txtName.text];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

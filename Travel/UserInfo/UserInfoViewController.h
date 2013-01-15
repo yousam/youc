@@ -15,7 +15,7 @@
 @interface UserInfoViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ASIHTTPRequestDelegate>
 {
     ASIFormDataRequest* request;
-    NSMutableArray*dataList;
+    NSMutableArray *dataList;
     
     //数量Label 游记，关注，粉丝，收藏，留言
     UILabel *lblTravelnum, *lblAttentionnum, *lblFansnum, *lblCollectsnum, *lblLeavesnum;
@@ -25,7 +25,7 @@
 
 @property (retain, nonatomic) GCDiscreetNotificationView *notificationView;
 @property (retain, nonatomic) ASIFormDataRequest* request;
-
+@property (retain, nonatomic) IBOutlet UITableView *tabView;
 @property (retain, nonatomic) IBOutlet UIView *mainView;
 
 @property (retain, nonatomic) IBOutlet UrlImageView *headImg;

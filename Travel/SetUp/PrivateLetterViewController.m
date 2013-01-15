@@ -2,7 +2,7 @@
 //  PrivateLetterViewController.m
 //  Travel
 //
-//  Created by 王颖 on 12-10-8.
+//  Created by 王俊 on 12-10-8.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
@@ -67,7 +67,7 @@
 	{
 		return;
 	}
-    [dataList removeAllObjects];
+    //[dataList removeAllObjects];
     NSString * strUrl=
     [NSString stringWithFormat:@"%@city",
      API_SEAECHSERVER_ADR];
@@ -136,7 +136,7 @@
     
     self.navigationController.navigationBarHidden=YES;
     notificationView = [[GCDiscreetNotificationView alloc]
-                        initWithText:@"私信加载中"
+                        initWithText:@"数据加载中"
                         showActivity:YES
                         inPresentationMode:GCDiscreetNotificationViewPresentationModeBottom
                         inView:self.view];
