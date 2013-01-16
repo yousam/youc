@@ -10,4 +10,8 @@
 
 @interface SearchTravelCell : UITableViewCell
 
+@property(retain, nonatomic) IBOutlet UILabel *lblTitle;
+@property(retain, nonatomic) IBOutlet UILabel *lblNear;
+@property(retain, nonatomic) IBOutlet UILabel *lblMove;
+
 @end

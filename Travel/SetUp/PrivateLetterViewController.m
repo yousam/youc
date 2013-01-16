@@ -67,7 +67,7 @@
 	{
 		return;
 	}
-    //[dataList removeAllObjects];
+    
     NSString * strUrl=
     [NSString stringWithFormat:@"%@city",
      API_SEAECHSERVER_ADR];
@@ -77,14 +77,10 @@
 	[request setRequestMethod:@"GET"]; 
     [ASIFormDataRequest setShouldUpdateNetworkActivityIndicator:NO];
     [request startAsynchronous];
-    
-    //NSString *responseStr=[[NSString alloc] initWithData:[request responseData] encoding:NSUTF8StringEncoding];
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)aRequest
 {
-    //NSString *responseString = [aRequest.responseString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
     NSString *responseString =[[NSString alloc] initWithData:[aRequest responseData] encoding:NSUTF8StringEncoding];
     
     NSDictionary*values=[responseString objectFromJSONString];//json字符串 序列化成对象 新方法

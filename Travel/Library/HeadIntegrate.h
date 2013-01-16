@@ -10,7 +10,7 @@
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 //系统默认的导航按钮
 #define BARBUTTON(TITLE, SELECTOR)[[[UIBarButtonItem alloc] initWithTitle:TITLE style:UIBarButtonItemStylePlain target:self action:SELECTOR] autorelease]
-#define API_SEAECHSERVER_ADR (@"http://yun.youcn.com.cn/")
+#define API_SEAECHSERVER_ADR (@"http://localhost:8080/yun/")
 #define NETWORK_BAD (@"您的网络好像有点问题，请重试")
 
 @interface HeadIntegrate : NSObject

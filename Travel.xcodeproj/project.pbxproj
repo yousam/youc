@@ -391,6 +391,33 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		102D8EDE16A6E6FB001407CF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				102D8EE016A6E720001407CF /* Cell */,
+				86ED68D615E138EA00FFD4E5 /* SearchViewController.h */,
+				86ED68D715E138EA00FFD4E5 /* SearchViewController.m */,
+				86ED68D815E138EA00FFD4E5 /* SearchViewController.xib */,
+				C38AFB4515D881380002A197 /* SettingsViewController.h */,
+				C38AFB4615D881380002A197 /* SettingsViewController.m */,
+				C38AFB4715D881380002A197 /* SettingsViewController.xib */,
+				C38AFB4A15D881570002A197 /* RegionViewController.h */,
+				C38AFB4B15D881570002A197 /* RegionViewController.m */,
+				C38AFB4C15D881570002A197 /* RegionViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		102D8EE016A6E720001407CF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C36EC8E416229F940060C168 /* SearchTravelCell.xib */,
+				C36EC8E516229F940060C168 /* SearchTravelCell.h */,
+				C36EC8E616229F940060C168 /* SearchTravelCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		107C787016A58EC000432327 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,9 +503,6 @@
 				C36EC8E116229F940060C168 /* UserCell.xib */,
 				C36EC8E216229F940060C168 /* UserCell.h */,
 				C36EC8E316229F940060C168 /* UserCell.m */,
-				C36EC8E416229F940060C168 /* SearchTravelCell.xib */,
-				C36EC8E516229F940060C168 /* SearchTravelCell.h */,
-				C36EC8E616229F940060C168 /* SearchTravelCell.m */,
 				C36EC91716231EA20060C168 /* FansCell.h */,
 				C36EC91816231EA20060C168 /* FansCell.m */,
 				C36EC91A16231EB90060C168 /* FansCell.xib */,
@@ -710,23 +734,15 @@
 			isa = PBXGroup;
 			children = (
 				86ED68B615E1280C00FFD4E5 /* Library */,
+				102D8EDE16A6E6FB001407CF /* Main */,
 				C36EC8B416229D0B0060C168 /* SetUp */,
 				C36EC8B516229D0B0060C168 /* Trip */,
 				C36EC8B616229D0B0060C168 /* UserInfo */,
 				86ED68D015E12E0100FFD4E5 /* Cell */,
 				C38AFB2F15D880750002A197 /* Supporting Files */,
-				C38AFB4515D881380002A197 /* SettingsViewController.h */,
-				C38AFB4615D881380002A197 /* SettingsViewController.m */,
-				C38AFB4715D881380002A197 /* SettingsViewController.xib */,
-				C38AFB4A15D881570002A197 /* RegionViewController.h */,
-				C38AFB4B15D881570002A197 /* RegionViewController.m */,
-				C38AFB4C15D881570002A197 /* RegionViewController.xib */,
 				C38AFB4F15D881910002A197 /* HomeViewController.h */,
 				C38AFB5015D881910002A197 /* HomeViewController.m */,
 				C38AFB5115D881910002A197 /* HomeViewController.xib */,
-				86ED68D615E138EA00FFD4E5 /* SearchViewController.h */,
-				86ED68D715E138EA00FFD4E5 /* SearchViewController.m */,
-				86ED68D815E138EA00FFD4E5 /* SearchViewController.xib */,
 				C38AFB3715D880750002A197 /* AppDelegate.h */,
 				C38AFB3815D880750002A197 /* AppDelegate.m */,
 			);
