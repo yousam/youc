@@ -12,9 +12,9 @@
 // ======
 
 // If defined will use the specified function for debug logging
-// Otherwise use PLog
+// Otherwise use //PLog
 #ifndef ASI_DEBUG_LOG
-    #define ASI_DEBUG_LOG PLog
+    #define ASI_DEBUG_LOG //PLog
 #endif
 
 // When set to 1 ASIHTTPRequests will print information about what a request is doing

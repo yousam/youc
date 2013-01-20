@@ -52,7 +52,6 @@
 		C321D4551659399300009BFB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C321D4461659399300009BFB /* Reachability.m */; };
 		C321D457165939EC00009BFB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C321D456165939EC00009BFB /* MediaPlayer.framework */; };
 		C321D45916593A3000009BFB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C321D45816593A3000009BFB /* libz.dylib */; };
-		C321D45C16593B3800009BFB /* ServiceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C321D45A16593B3800009BFB /* ServiceBase.m */; };
 		C332EBF416C0A0A300D664AA /* GCDiscreetNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C332EBF316C0A0A300D664AA /* GCDiscreetNotificationView.m */; };
 		C348157516A0FB8B002A19E7 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C348157416A0FB8B002A19E7 /* NSString+URLEncoding.m */; };
 		C36EC8BA16229D340060C168 /* LLWaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36EC8B816229D340060C168 /* LLWaterFlowView.m */; };
@@ -210,8 +209,6 @@
 		C321D4461659399300009BFB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C321D456165939EC00009BFB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C321D45816593A3000009BFB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		C321D45A16593B3800009BFB /* ServiceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceBase.m; sourceTree = "<group>"; };
-		C321D45B16593B3800009BFB /* ServiceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceBase.h; sourceTree = "<group>"; };
 		C332EBF216C0A0A300D664AA /* GCDiscreetNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDiscreetNotificationView.h; sourceTree = "<group>"; };
 		C332EBF316C0A0A300D664AA /* GCDiscreetNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDiscreetNotificationView.m; sourceTree = "<group>"; };
 		C348157316A0FB8B002A19E7 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -478,9 +475,6 @@
 				C3E3608516972B940073067C /* CellView.h */,
 				C3E3608616972B940073067C /* CellView.m */,
 				C3E3608716972B950073067C /* CellView.xib */,
-				C321D45A16593B3800009BFB /* ServiceBase.m */,
-				C321D45B16593B3800009BFB /* ServiceBase.h */,
-				C321D3E71659327D00009BFB /* Constants.h */,
 				C36EC8DE16229F940060C168 /* AttentionCell.xib */,
 				C36EC8DF16229F940060C168 /* AttentionCell.h */,
 				C36EC8E016229F940060C168 /* AttentionCell.m */,
@@ -684,6 +678,7 @@
 		C38AFB2E15D880750002A197 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				C321D3E71659327D00009BFB /* Constants.h */,
 				86ED68B615E1280C00FFD4E5 /* Library */,
 				102D8EDE16A6E6FB001407CF /* Main */,
 				C36EC8B416229D0B0060C168 /* SetUp */,
@@ -884,7 +879,6 @@
 				C321D4531659399300009BFB /* ASIInputStream.m in Sources */,
 				C321D4541659399300009BFB /* ASINetworkQueue.m in Sources */,
 				C321D4551659399300009BFB /* Reachability.m in Sources */,
-				C321D45C16593B3800009BFB /* ServiceBase.m in Sources */,
 				C3E3608816972B950073067C /* CellView.m in Sources */,
 				C3E3608E16972C3A0073067C /* PSCollectionView.m in Sources */,
 				C3E3608F16972C3A0073067C /* PSCollectionViewCell.m in Sources */,

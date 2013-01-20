@@ -13,7 +13,6 @@
 #import "UrlImageButton.h"
 #import "CellView.h"
 #import "PSCollectionViewCell.h"
-#import "JSON.h"
 #define kTriggerOffSet 100.0f
 
 /////////////////////////////////////

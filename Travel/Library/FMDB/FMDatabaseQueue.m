@@ -40,7 +40,6 @@
         FMDBRetain(_db);
         
         if (![_db open]) {
-            PLog(@"Could not create database queue for path %@", aPath);
             FMDBRelease(self);
             return 0x00;
         }
@@ -82,7 +81,6 @@
         _db = FMDBReturnRetained([FMDatabase databaseWithPath:_path]);
         
         if (![_db open]) {
-            PLog(@"FMDatabaseQueue could not reopen database for path %@", _path);
             FMDBRelease(_db);
             _db  = 0x00;
             return 0x00;
@@ -101,7 +99,6 @@
         block(db);
         
         if ([db hasOpenResultSets]) {
-            PLog(@"Warning: there is at least one open result set around after performing [FMDatabaseQueue inDatabase:]");
         }
     });
     

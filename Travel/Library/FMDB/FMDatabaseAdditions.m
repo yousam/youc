@@ -133,8 +133,6 @@ return ret;
             usleep(20);
             
             if (_busyRetryTimeout && (numberOfRetries++ > _busyRetryTimeout)) {
-                PLog(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
-                PLog(@"Database busy");
             }          
         } 
         else if (rc != SQLITE_OK) {

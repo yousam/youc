@@ -21,7 +21,6 @@ static DBHelper *staticInstance = nil;
 
 - (BOOL)CreateTable:(FMDatabase *)db
 {
-    //	PLog(@"CreateTable");
     
 	// table 1
 	NSString *sqlhttpcache = @"create table IF NOT EXISTS HTTP_Cache(\

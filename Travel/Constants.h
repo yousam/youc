@@ -16,7 +16,6 @@
 #define API_DOMAIN (@"http://sp.autohome.com.cn/")
 
 
-#define NO_NETWORK (@"汽车之家论坛需要链接网络才可使用，请按home键退出程序并设置您的网络链接")
 #define NETWORK_BAD (@"你的网络好像有点问题，请重试")
 
 #endif

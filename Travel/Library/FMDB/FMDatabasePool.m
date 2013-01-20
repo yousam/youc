@@ -97,7 +97,6 @@
                 NSUInteger currentCount = [_databaseOutPool count] + [_databaseInPool count];
                 
                 if (currentCount >= _maximumNumberOfDatabasesToCreate) {
-                    PLog(@"Maximum number of databases (%ld) has already been reached!", (long)currentCount);
                     return;
                 }
             }
@@ -119,7 +118,6 @@
             }
         }
         else {
-            PLog(@"Could not open up the database at path %@", _path);
             db = 0x00;
         }
     }];
