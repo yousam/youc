@@ -40,7 +40,10 @@
 //    NSLog(@"txtPsw.text=%@",txtPsw.text);
     [UserUtils setUserId:2];
     [UserUtils setUserName:txtName.text];
-    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:txtName.text,@"userName",nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadUserInfo" object:dic];
+    [dic release];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 

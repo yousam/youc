@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
-    NSArray *tableTitles;
+    NSMutableArray *tableTitles;
+    
 }
+@property (retain, nonatomic) IBOutlet UITableView *tabSetting;
 
 - (void)setVisible:(BOOL)visible;
 

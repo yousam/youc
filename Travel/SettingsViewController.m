@@ -30,22 +30,33 @@
     if ([UserUtils getUserId] > 0) {
         userName = [UserUtils getUserName];
     } 
-    
-    tableTitles = [NSArray arrayWithObjects:userName,@"主页",@"精选",@"设置",@"搜索",@"关于",@"意见反馈",@"私信",@"帮助",nil];
+    tableTitles = [NSMutableArray arrayWithObjects:userName,@"主页",@"精选",@"设置",@"搜索",@"关于",@"意见反馈",@"私信",@"帮助",nil];
     [tableTitles retain];
+    //注册通知 监听用户登录
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadUserInfo:) name:@"loadUserInfo" object:nil];
     [super viewDidLoad];  
     
 }
+//监听用户登录后改变个人主页列表项
+-(void)loadUserInfo:(id)sender{
 
+    id obj=[[sender object]objectForKey:@"userName"];
+    if (obj) {
+        [tableTitles replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"%@-个人主页",obj]];
+        [self.tabSetting reloadData];
+    }
+}
 - (void)viewDidUnload {
     [tableTitles release];
-    tableTitles = nil;
-    [super viewDidUnload];
+    [self setTabSetting:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+     [super viewDidUnload];
 }
 
 - (void)dealloc {
-    
     [tableTitles release];
+    [_tabSetting release];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
 
