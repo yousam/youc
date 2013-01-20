@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MAMapKit.h"
+@interface FootprintViewController : UIViewController<MAMapViewDelegate>
+{
 
-@interface FootprintViewController : UIViewController
+    MAMapView *myMapView;
+}
 - (IBAction)onAdd:(id)sender;
 - (IBAction)onBack:(id)sender;
 @end

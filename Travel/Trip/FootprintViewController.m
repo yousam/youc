@@ -26,7 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    myMapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 44, 320, 420)];
+    myMapView.mapType = MAMapTypeStandard;
+    myMapView.delegate = self;
+    
+    CLLocationCoordinate2D center = {39.91669,116.39716};
+    MACoordinateSpan span = {0.04,0.03};
+    MACoordinateRegion region = {center,span};
+    [myMapView setRegion:region animated:NO];
+    [self.view addSubview:myMapView];
 }
 
 - (void)viewDidUnload
