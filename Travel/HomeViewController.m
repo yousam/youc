@@ -70,6 +70,7 @@ NSUInteger kNumberOfPages = 0;
     self.scroImg.pagingEnabled = YES;
     [headView addSubview:self.scroImg];
     
+    
     pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake(0, 0, 200, 30)];
     pageControl.center=CGPointMake(headView.center.x, 120);
     pageControl.currentPage = 0;
