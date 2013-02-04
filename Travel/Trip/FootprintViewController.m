@@ -37,6 +37,7 @@
 }
 - (IBAction)onAdd:(id)sender {
     AddFootprintViewController *user=[[AddFootprintViewController alloc]initWithNibName:@"AddFootprintViewController" bundle:nil];
+    
     [self.navigationController pushViewController:user animated:YES];
     [user release];
 }
