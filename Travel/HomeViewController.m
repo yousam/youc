@@ -281,7 +281,7 @@ if (scrollView==scroImg) {
 }
 - (void)requestFinished:(ASIHTTPRequest *)aRequest
 {
-    int statusCode = [aRequest responseStatusCode];
+//    int statusCode = [aRequest responseStatusCode];
     NSLog(@"%@", [aRequest responseString]);
     //真实调用接口 联调时放开
 //    if ([aRequest.responseString length]!=0&&statusCode==200)

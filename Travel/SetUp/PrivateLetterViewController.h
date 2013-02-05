@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "ASIFormDataRequest.h"
 #import "System.h"
-
-@interface PrivateLetterViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@class GCDiscreetNotificationView;
+@interface PrivateLetterViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,ASIHTTPRequestDelegate>
 {
-    ASIFormDataRequest* request;
+    ASIHTTPRequest* request;
     NSMutableArray*dataList;
 }
-
+@property (nonatomic, retain) GCDiscreetNotificationView *notificationView;
 @property (retain, nonatomic) IBOutlet UITableView *tab;
+@property(retain,nonatomic)ASIHTTPRequest* request;
 -(void)getData;
 -(IBAction)onNav:(id)sender ;
 

@@ -27,8 +27,8 @@
     int len = [text length];
     NSMutableAttributedString *mutaString = [[NSMutableAttributedString alloc]initWithString:text];
     [mutaString addAttribute:(NSString *)(kCTForegroundColorAttributeName) value:(id)color.CGColor range:NSMakeRange(0, len)];
-    CTFontRef ctFont2 = CTFontCreateWithName((__bridge CFStringRef)font.fontName, font.pointSize,NULL);
-    [mutaString addAttribute:(NSString *)(kCTFontAttributeName) value:(__bridge id)ctFont2 range:NSMakeRange(0, len)];
+    CTFontRef ctFont2 = CTFontCreateWithName(( CFStringRef)font.fontName, font.pointSize,NULL);
+    [mutaString addAttribute:(NSString *)(kCTFontAttributeName) value:( id)ctFont2 range:NSMakeRange(0, len)];
     CFRelease(ctFont2);
     resultAttributedString = mutaString;
 }
@@ -55,8 +55,8 @@
         //改变字体颜色
         [resultAttributedString addAttribute:(NSString *)(kCTForegroundColorAttributeName) value:(id)keyWordColor.CGColor range:keyRange];
         //改变字体样式和大小
-        CTFontRef ctFont1 = CTFontCreateWithName((__bridge CFStringRef)font.fontName, font.pointSize, NULL);
-        [resultAttributedString addAttribute:(NSString *)(kCTFontAttributeName) value:(__bridge id)ctFont1 range:keyRange];
+        CTFontRef ctFont1 = CTFontCreateWithName(( CFStringRef)font.fontName, font.pointSize, NULL);
+        [resultAttributedString addAttribute:(NSString *)(kCTFontAttributeName) value:( id)ctFont1 range:keyRange];
         CFRelease(ctFont1);
     }
 }
@@ -67,8 +67,8 @@
     //改变字体颜色
     [resultAttributedString addAttribute:(NSString *)(kCTForegroundColorAttributeName) value:(id)keyWordColor.CGColor range:keyRange];
     //改变字体样式和大小
-    CTFontRef ctFont1 = CTFontCreateWithName((__bridge CFStringRef)font.fontName, font.pointSize, NULL);
-    [resultAttributedString addAttribute:(NSString *)(kCTFontAttributeName) value:(__bridge id)ctFont1 range:keyRange];
+    CTFontRef ctFont1 = CTFontCreateWithName(( CFStringRef)font.fontName, font.pointSize, NULL);
+    [resultAttributedString addAttribute:(NSString *)(kCTFontAttributeName) value:( id)ctFont1 range:keyRange];
     CFRelease(ctFont1);
 }
 
@@ -80,7 +80,7 @@
         CGContextSaveGState(context);
         CGContextTranslateCTM(context, 0.0, 0.0);
         CGContextScaleCTM(context, 1.0, -1.0);
-        CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge  CFAttributedStringRef)resultAttributedString);
+        CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((  CFAttributedStringRef)resultAttributedString);
         CGMutablePathRef pathRef = CGPathCreateMutable();
         CGPathAddRect(pathRef,NULL , CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));
         CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), pathRef,NULL );

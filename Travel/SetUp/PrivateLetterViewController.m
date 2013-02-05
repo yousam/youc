@@ -7,15 +7,14 @@
 //
 
 #import "PrivateLetterViewController.h"
-#import "ActivityIndicatorView.h"
 #import "AppDelegate.h"
 #import "PrivteCell.h"
 #import "JSON.h"
 #import "HeadIntegrate.h"
-
+#import "GCDiscreetNotificationView.h"
 @implementation PrivateLetterViewController
 @synthesize tab;
-
+@synthesize request,notificationView;
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -69,36 +68,37 @@
     [NSString stringWithFormat:@"%@city",
      API_SEAECHSERVER_ADR];
 	NSURL * url=[NSURL URLWithString:strUrl];
-    [ASIFormDataRequest setShouldUpdateNetworkActivityIndicator:NO];
-	request = [ASIFormDataRequest requestWithURL:url];
-    [request setDelegate:self];
-    [request setRequestMethod:@"GET"];
-    [request setDidFinishSelector:@selector(requestNewsList:)];
-    [request setThreadPriority:1];
-	[request startAsynchronous];
+	self.request=[ASIHTTPRequest requestWithURL:url];
+	self.request.delegate=self;
+	[request setRequestMethod:@"GET"];
+    [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
+    [request startAsynchronous];
 }
 
-- (void)requestNewsList:(ASIHTTPRequest *)aRequest
+- (void)requestFinished:(ASIHTTPRequest *)aRequest
 {
     NSString *responseString = [aRequest responseString];
     NSDictionary *body= [[responseString JSONValue]objectForKey:@"body"];
     [dataList removeAllObjects];
     [dataList addObjectsFromArray:[body objectForKey:@"cityList"]];
     [tab reloadData];
-    [self.view stopLoadingAnimation];
+    [self.notificationView hide:YES];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)aRequest
 {
-    [self.view stopLoadingAnimation];
+   [self.notificationView hide:YES];
 }
 
 
 - (void)requestStarted:(ASIHTTPRequest *)aRequest
 {
-    [self.view startLoadingAnimation];
+   [self.notificationView show:YES];
 }
+- (void)requestRedirected:(ASIHTTPRequest *)request{
 
+    
+}
 #pragma mark - View lifecycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -120,7 +120,11 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBarHidden=YES;
-    
+    notificationView = [[GCDiscreetNotificationView alloc]
+                        initWithText:@"私信加载中"
+                        showActivity:YES
+                        inPresentationMode:GCDiscreetNotificationViewPresentationModeBottom
+                        inView:self.view];
     [self getData];
 }
 
@@ -137,7 +141,9 @@
 }
 
 - (void)dealloc {
+    [notificationView release];
     [tab release];
+    [request release];
     [dataList release];
     [super dealloc];
 }

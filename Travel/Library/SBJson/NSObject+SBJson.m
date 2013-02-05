@@ -36,8 +36,13 @@
 - (NSString *)JSONRepresentation {
     SBJsonWriter *writer = [[[SBJsonWriter alloc] init] autorelease];    
     NSString *json = [writer stringWithObject:self];
-    if (!json)
+    if (!json){
     return json;
+    }
+    else{
+    
+        return nil;
+    }
 }
 
 @end
@@ -49,8 +54,12 @@
 - (id)JSONValue {
     SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
     id repr = [parser objectWithString:self];
-    if (!repr)
+    if (!repr){
     return repr;
+    }
+    else{
+        return nil;
+    }
 }
 
 @end

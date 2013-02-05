@@ -62,6 +62,7 @@
 		C321D457165939EC00009BFB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C321D456165939EC00009BFB /* MediaPlayer.framework */; };
 		C321D45916593A3000009BFB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C321D45816593A3000009BFB /* libz.dylib */; };
 		C321D45C16593B3800009BFB /* ServiceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C321D45A16593B3800009BFB /* ServiceBase.m */; };
+		C332EBF416C0A0A300D664AA /* GCDiscreetNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C332EBF316C0A0A300D664AA /* GCDiscreetNotificationView.m */; };
 		C36EC8BA16229D340060C168 /* LLWaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36EC8B816229D340060C168 /* LLWaterFlowView.m */; };
 		C36EC8C716229E5B0060C168 /* TripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36EC8BD16229E5B0060C168 /* TripViewController.xib */; };
 		C36EC8C816229E5B0060C168 /* AddFootprintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36EC8BE16229E5B0060C168 /* AddFootprintViewController.xib */; };
@@ -133,8 +134,6 @@
 /* Begin PBXFileReference section */
 		10099781169DAD9700595731 /* HeadIntegrate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadIntegrate.h; sourceTree = "<group>"; };
 		10099782169DAD9800595731 /* HeadIntegrate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadIntegrate.m; sourceTree = "<group>"; };
-		10099783169DB2D200595731 /* ActivityIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorView.h; sourceTree = "<group>"; };
-		10099784169DB2D200595731 /* ActivityIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorView.m; sourceTree = "<group>"; };
 		582710EF15DA75F7005C03A0 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		582710F015DA75F7005C03A0 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		582710F115DA75F7005C03A0 /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
@@ -234,6 +233,8 @@
 		C321D45816593A3000009BFB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C321D45A16593B3800009BFB /* ServiceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceBase.m; sourceTree = "<group>"; };
 		C321D45B16593B3800009BFB /* ServiceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceBase.h; sourceTree = "<group>"; };
+		C332EBF216C0A0A300D664AA /* GCDiscreetNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDiscreetNotificationView.h; sourceTree = "<group>"; };
+		C332EBF316C0A0A300D664AA /* GCDiscreetNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDiscreetNotificationView.m; sourceTree = "<group>"; };
 		C36EC8B816229D340060C168 /* LLWaterFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLWaterFlowView.m; sourceTree = "<group>"; };
 		C36EC8B916229D340060C168 /* LLWaterFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLWaterFlowView.h; sourceTree = "<group>"; };
 		C36EC8BB16229E5B0060C168 /* AddTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTravelViewController.h; sourceTree = "<group>"; };
@@ -397,8 +398,8 @@
 		86ED68B615E1280C00FFD4E5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				10099783169DB2D200595731 /* ActivityIndicatorView.h */,
-				10099784169DB2D200595731 /* ActivityIndicatorView.m */,
+				C332EBF216C0A0A300D664AA /* GCDiscreetNotificationView.h */,
+				C332EBF316C0A0A300D664AA /* GCDiscreetNotificationView.m */,
 				10099781169DAD9700595731 /* HeadIntegrate.h */,
 				10099782169DAD9800595731 /* HeadIntegrate.m */,
 				C3E3608A16972C390073067C /* PSCollectionView.m */,
@@ -869,6 +870,7 @@
 				C3E3609C16972CA00073067C /* MessageInterceptor.m in Sources */,
 				C3E3609D16972CA00073067C /* LoadMoreTableFooterView.m in Sources */,
 				C3E3609E16972CA00073067C /* PullPsCollectionView.m in Sources */,
+				C332EBF416C0A0A300D664AA /* GCDiscreetNotificationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,8 +909,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PROVISIONING_PROFILE = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
+				PROVISIONING_PROFILE = "54CF92B1-3530-4044-B1F4-999781BD3B32";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "54CF92B1-3530-4044-B1F4-999781BD3B32";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -928,8 +930,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
+				PROVISIONING_PROFILE = "54CF92B1-3530-4044-B1F4-999781BD3B32";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "54CF92B1-3530-4044-B1F4-999781BD3B32";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -945,8 +947,8 @@
 				INFOPLIST_FILE = "Travel/Travel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
+				PROVISIONING_PROFILE = "54CF92B1-3530-4044-B1F4-999781BD3B32";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "54CF92B1-3530-4044-B1F4-999781BD3B32";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -961,8 +963,8 @@
 				INFOPLIST_FILE = "Travel/Travel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "094C48FE-6C0C-4DA1-9259-C2A6DB4E3BDC";
+				PROVISIONING_PROFILE = "54CF92B1-3530-4044-B1F4-999781BD3B32";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "54CF92B1-3530-4044-B1F4-999781BD3B32";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
